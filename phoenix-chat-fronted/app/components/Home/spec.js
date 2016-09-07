@@ -12,3 +12,5 @@ describe("<Home />", () => {
 		expect(renderedComponent.is("div")).toEqual(true)
 	})
 })
+
+july_28_2016
