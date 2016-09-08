@@ -4,7 +4,7 @@ import style from "./style.css"
 
 import { default as Sidebar} from "../Sidebar"
 
-export class Chat extends React Component {
+export class Chat extends React.Component {
 	render() {
 		return (
 			<div>

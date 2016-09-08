@@ -19,7 +19,7 @@ defmodule PhoenixChat.Mixfile do
   def application do
     [mod: {PhoenixChat, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :comeonin, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_identity]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,7 +39,10 @@ defmodule PhoenixChat.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 2.3"},
-     {:corsica, "~> 0.4"}]
+     {:corsica, "~> 0.4"},
+     {:ueberauth, "~> 0.2"},
+     {:ueberauth_identity, "~> 0.2"},
+     {:guardian, "~> 0.10"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
