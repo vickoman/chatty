@@ -11,7 +11,7 @@ import Settings from "./components/Settings"
 import { default as App } from "./components/App"
 import "./styles/reset.css"
 
-const App = props => (<div>{props.children}</div>)
+// const App = props => (<div>{props.children}</div>)
 
 ReactDOM.render(
   <Provider store={store}>

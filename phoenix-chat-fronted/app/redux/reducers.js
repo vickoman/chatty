@@ -18,11 +18,11 @@ function user(state = {
         username: action.payload.user.username,
         id: action.payload.user.id
       })
-  	case "USER_AUTH":
-      return Object.assign({}, state, {
-      email: action.payload.user.email,
-      username: action.payload.user.username,
-      id: action.payload.user.id
+	case "USER_AUTH":
+	  return Object.assign({}, state, {
+        email: action.payload.user.email,
+        username: action.payload.user.username,
+        id: action.payload.user.id
       })
     default: return state
   }

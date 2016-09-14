@@ -2,6 +2,8 @@ import React from "react"
 import cssModules from "react-css-modules"
 import { connect } from "react-redux"
 import style from "./style.css"
+import PhoenixChat from "phoenix-chat"
+
 
 import { default as Signup } from "../Signup"
 import { default as Login } from "../Login"
@@ -44,7 +46,11 @@ export class Home extends React.Component {
 
   render() {
     if (this.props.user.email) {
-      return (<Chat />)
+      return (
+          <Chat>
+            <PhoenixChat />
+          </Chat>
+      )
     }
     return (
       <div className={style.leader}>

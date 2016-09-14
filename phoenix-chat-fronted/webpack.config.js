@@ -15,23 +15,27 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['babel'],
-        exclude: /node_modules/,
-        include: path.join(__dirname, 'app')
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css?modules&importLoaders=1&localIdentName=[local]_[hash:base64:5]!postcss',
-        include: path.join(__dirname, 'app')
-      }
-    ]
-  },
+	    loaders: [
+	      {
+	        test: /\.js$/,
+	        loaders: ['babel'],
+	        exclude: /node_modules/,
+	        include: path.join(__dirname, 'app')
+	      },
+	      {
+	        test: /\.css$/,
+	        loader: 'style!css?modules&importLoaders=1&localIdentName=[local]_[hash:base64:5]!postcss',
+	        include: path.join(__dirname, 'app')
+	      }
+	    ]
+  	},
 
 	resolve: {
 		extensions: [ '', '.js']
+		fallback: path.join(__dirname, "node_modules")
+	},
+	resolveLoader: {
+	    fallback: path.join(__dirname, "node_modules")
 	},
 	postcss: function () {
       return [cssnext]
