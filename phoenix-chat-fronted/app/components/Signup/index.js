@@ -1,6 +1,8 @@
 import React from "react"
 import cssModules from "react-css-modules"
+import { connect } from "react-redux"
 import style from "./style.css"
+import Actions from "../../redux/actions"
 
 import { default as Button } from "../Button"
 
@@ -16,6 +18,7 @@ export class Signup extends React.Component {
       email: document.getElementById('signup-email').value,
       password: document.getElementById('signup-password').value
     }
+	this.props.dispatch(Actions.userNew(user))
     fetch("http://localhost:4000/api/users", {
       method: "POST",
       headers: {
@@ -32,7 +35,7 @@ export class Signup extends React.Component {
       console.warn(err);
     })
   }
-  
+
   render() {
     return (
       <div className={style.wrapper}>
@@ -77,4 +80,4 @@ export class Signup extends React.Component {
   }
 }
 
-export default cssModules(Signup, style)
+export default connect()(cssModules(Signup, style))

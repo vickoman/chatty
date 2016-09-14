@@ -10,8 +10,8 @@ export class Chat extends React.Component {
 			<div>
 				<div className={style.chatWrapper}>
 					Chat me
-				</div>	
-				{this.props.children}			
+				</div>
+				{this.props.children}
 			</div>
 		)
 	}
