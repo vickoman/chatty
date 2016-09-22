@@ -153,12 +153,7 @@ var PhoenixChatSidebar = exports.PhoenixChatSidebar = function (_React$Component
           _react2.default.createElement(
             'div',
             null,
-            '100% free by ',
-            _react2.default.createElement(
-              'a',
-              { href: 'https://learnphoenix.io' },
-              'PhoenixChat'
-            )
+            'VickoChat'
           )
         )
       );

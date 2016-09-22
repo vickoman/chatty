@@ -2,7 +2,7 @@ defmodule PhoenixChat.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", PhoenixChat.RoomChannel
+  channel "room:*", PhoenixChat.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -20,6 +20,11 @@ defmodule PhoenixChat.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   def connect(_params, socket) do
+    socker = socket
+      |> assign(:user_id, params["id"])
+      |> assign(:username, params["username"])
+      |> assing(:email, params["email"])
+      |> assing(:uuid, params["uuid"])
     {:ok, socket}
   end
 

@@ -80,7 +80,7 @@ export class PhoenixChatSidebar extends React.Component {
             type="text"
             style={style.inputBox} />
           <div>
-            100% free by <a href="https://learnphoenix.io">PhoenixChat</a>
+            VickoChat
           </div>
         </div>
       </div>
